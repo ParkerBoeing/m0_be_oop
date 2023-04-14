@@ -25,6 +25,7 @@ puts unicorn.color == 'silver'
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
 class Vampire
+    attr_reader :name, :pet, :thirsty
     def initialize(name, pet = "Bat")
         @name = name
         @pet = pet
@@ -49,6 +50,7 @@ p v1
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
 class Dragon
+    attr_reader :name, :rider, :color, :is_hungry, :times_eaten
     def initialize(name, rider, color)
         @name = name
         @rider = rider
