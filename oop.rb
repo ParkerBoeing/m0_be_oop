@@ -19,7 +19,23 @@ p uni1
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 #  it should have a thirsty attribute, that is true by default
 #  it should have a drink method. When called, the thirsty attribute changes to false
+class Vampire
+    def initialize(name, pet = "Bat")
+        @name = name
+        @pet = pet
+        @thirsty = true
+    end
 
+    def drink
+        @thirsty = false
+    end
+end
+
+v1 = Vampire.new("George", "Lizard")
+p v1
+
+v1.drink
+p v1
 
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
